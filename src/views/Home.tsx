@@ -1,5 +1,6 @@
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Header from '../components/Header';
 
 const Home = () => {
   return (
@@ -7,15 +8,7 @@ const Home = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={styles.backgroundStyle}>
-        <View style={styles.header}>
-          <Image
-            source={{
-              uri: 'https://i.seadn.io/gae/AYjmjIOns7qS6MxEjiZTy9dOtdacz-glSiKmzbuo3smKdG_GvUJP2XQt6mA_gbYVfVLv-OLJTYJKuCZscOSca7Idv-MU0h0l2Y1o?auto=format&dpr=1&w=1000',
-            }}
-            style={styles.profilePicture}
-          />
-          <Text>Settings</Text>
-        </View>
+        <Header />
         <Text>Home</Text>
         <Text>Here we will create a new Application</Text>
       </ScrollView>
@@ -27,17 +20,7 @@ export default Home;
 
 const styles = StyleSheet.create({
   backgroundStyle: {
-    paddingHorizontal: 20,
-  },
-  header: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  profilePicture: {
-    width: 50,
-    height: 50,
-    borderRadius: 50,
+    paddingHorizontal: 15,
+    paddingVertical: 20,
   },
 });
