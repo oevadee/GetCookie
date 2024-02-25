@@ -5,10 +5,10 @@
  * @format
  */
 
-import * as React from 'react';
-import {NavigationContainer, NavigationProp} from '@react-navigation/native';
-import {RootStackParamList} from './src/navigation/types';
-import {Navigation} from './src/navigation';
+import * as React from "react";
+import { NavigationContainer, NavigationProp } from "@react-navigation/native";
+import { RootStackParamList } from "./src/navigation/types";
+import { Navigation } from "./src/navigation";
 
 export type StackNavigation = NavigationProp<RootStackParamList>;
 

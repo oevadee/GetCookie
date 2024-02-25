@@ -1,9 +1,9 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
-import Home from '../views/Home';
-import {RootStackParamList} from './types';
-import SettingsView from '../views/Settings';
-import Icon from '../components/Icon';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import { HomeScreen } from "../screens/Home";
+import { RootStackParamList } from "./types";
+import { SettingsScreen } from "../screens/Settings";
+import Icon from "../components/Icon";
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
@@ -12,19 +12,19 @@ const TabGroup = () => {
     <Tab.Navigator>
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={HomeScreen}
         options={{
           tabBarIcon: () => (
-            <Icon imagePath={require('../../assets/icons/home.png')} />
+            <Icon imagePath={require("../../assets/icons/home.png")} />
           ),
         }}
       />
       <Tab.Screen
         name="Settings"
-        component={SettingsView}
+        component={SettingsScreen}
         options={{
           tabBarIcon: () => (
-            <Icon imagePath={require('../../assets/icons/settings.png')} />
+            <Icon imagePath={require("../../assets/icons/settings.png")} />
           ),
         }}
       />

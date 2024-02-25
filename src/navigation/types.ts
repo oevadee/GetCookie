@@ -1,19 +1,19 @@
-import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export type RootStackParamList = {
   Home: undefined;
-  Settings: {userId: number} | undefined;
+  Settings: { userId: number } | undefined;
 };
 
 export type HomeScreenProps = NativeStackScreenProps<
   RootStackParamList,
-  'Home'
+  "Home"
 >;
 
 export type SettingsScreenProps = NativeStackScreenProps<
   RootStackParamList,
-  'Settings'
+  "Settings"
 >;
 
 export type BottomTabParamList = {
@@ -21,9 +21,9 @@ export type BottomTabParamList = {
   Settings: undefined;
 };
 
-export type HomeTabProps = BottomTabScreenProps<BottomTabParamList, 'Home'>;
+export type HomeTabProps = BottomTabScreenProps<BottomTabParamList, "Home">;
 
 export type SettingsTabProps = BottomTabScreenProps<
   BottomTabParamList,
-  'Settings'
+  "Settings"
 >;

@@ -1,5 +1,5 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
 type ArticleProps = {
   title: string;
@@ -8,7 +8,7 @@ type ArticleProps = {
   likes: number;
 };
 
-const Article = ({title, description, createdAt, likes}: ArticleProps) => {
+const Article = ({ title, description, createdAt, likes }: ArticleProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderBottomColor: "#ccc",
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   description: {
     fontSize: 16,
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   metadata: {
     fontSize: 14,
-    color: '#666',
+    color: "#666",
     marginTop: 5,
   },
 });
