@@ -8,7 +8,12 @@ type ArticleProps = {
   likes: number;
 };
 
-const Article = ({ title, description, createdAt, likes }: ArticleProps) => {
+export const Article = ({
+  title,
+  description,
+  createdAt,
+  likes,
+}: ArticleProps) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
@@ -20,8 +25,6 @@ const Article = ({ title, description, createdAt, likes }: ArticleProps) => {
     </View>
   );
 };
-
-export default Article;
 
 const styles = StyleSheet.create({
   container: {

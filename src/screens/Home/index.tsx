@@ -1,38 +1,28 @@
-import {
-  FlatList,
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
 import React from "react";
-import { Header } from "../../components/Header";
+import { FlatList, StyleSheet, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
+import { Header } from "../../components/Header";
+import { Article } from "../../components/Article";
 import { RootStackParamList } from "../../navigation/types";
 import { articles } from "../../../data/articles";
-import Article from "../../components/Article";
+import { screenStyles } from "../../styles/screenStyles";
 
 type NavigatorProps = NativeStackScreenProps<RootStackParamList, "Home">;
 
 export const HomeScreen = ({ navigation, route }: NavigatorProps) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.mainWrapper}>
       <Header />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <FlatList
-          data={articles}
-          renderItem={({ item }) => <Article {...item} />}
-          keyExtractor={article => article.title}
-        />
-      </ScrollView>
+      <FlatList
+        data={articles}
+        renderItem={({ item }) => <Article {...item} />}
+        keyExtractor={article => article.title}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 15,
-    paddingVertical: 20,
-  },
+  ...screenStyles,
 });
